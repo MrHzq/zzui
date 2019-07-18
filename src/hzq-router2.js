@@ -2,7 +2,7 @@
  * @Author: hzq
  * @Date: 2018-12-12 10:10:19
  * @Last Modified by: hzq
- * @Last Modified time: 2019-07-16 21:37:53
+ * @Last Modified time: 2019-07-18 20:06:10
  * @文件说明: 所有路由处理
  * key：为views下面的【文件夹】名称
  * []：为对应key下面的【.vue文件】名称
@@ -98,13 +98,13 @@ export default ({ rc, redirect = '', rootFile = 'views' }) => {
             })
             // 如果 找到了 对应的 父路由数据(fobj)
             if (fobj) {
-                // 生成 当前路由的path：1、去掉当前路由中与父路由重复的；2、去掉/；3、将 _ 转为 :；4、将 /: 转为 :/
-                const path = c.fileName
+                // 生成 当前路由的path：1、去掉当前路由中与父路由重复的；2、去掉/；3、将 _ 转为 :；
+
+                let path = c.fileName
                     .replace(fobj.fileName, '')
                     .substr(1)
                     .replace('_', ':')
-                    .replace('/:', ':/')
-
+                // if (path.match(':')) path += '?'
                 // 将真正的路由path赋值给当前路由
                 c.path = path
 

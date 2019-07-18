@@ -12,73 +12,84 @@ console.log(routes)
 export default new Router({
     mode: 'history',
     base: process.env.BASE_URL,
-    // component: () =>
-    //     import(/* webpackChunkName: "about" */ './views/index.vue'),
+    //     import('./views/index.vue'),
     routes
-    // [
+    // :[
     //     {
-    //         path: '/index', // '/'
+    //         path: '/',
+    //         component: () => import('./views/index.vue'),
     //         children: [
     //             {
-    //                 path: 'index', // ''
+    //                 path: '',
     //                 name: 'index-index',
-    //                 component: () => {}
+    //                 component: () => import('./views/index/index.vue')
     //             },
     //             {
     //                 path: 'about',
     //                 name: 'index-about',
-    //                 component: () => {}
+    //                 component: () => import('./views/index/about.vue')
     //             },
     //             {
     //                 path: 'case',
-    //                 component: () => {},
+    //                 component: () => import('./views/index/case.vue'),
     //                 children: [
     //                     {
-    //                         path: 'index', // ''
+    //                         path: '',
     //                         name: 'index-case-index',
-    //                         component: () => {},
+    //                         component: () =>
+    //                             import('./views/index/case/index.vue'),
     //                         children: [
     //                             {
-    //                                 path: ':id?',
+    //                                 path: ':id',
     //                                 name: 'index-case-index-id',
-    //                                 component: () => {}
+    //                                 component: () =>
+    //                                     import(
+    //                                         './views/index/case/index/_id.vue'
+    //                                     )
     //                             }
     //                         ]
     //                     },
     //                     {
-    //                         path: 'detail/:id?',
+    //                         path: 'detail/:id',
     //                         name: 'index-case-detail-id',
-    //                         component: () => {}
+    //                         component: () =>
+    //                             import('./views/index/case/detail/_id.vue')
     //                     }
     //                 ]
     //             },
     //             {
     //                 path: 'help',
-    //                 component: () => {},
+    //                 component: () => import('./views/index/help.vue'),
     //                 children: [
     //                     {
-    //                         path: 'index', // ''
+    //                         path: '',
     //                         name: 'index-help-index',
-    //                         component: () => {},
+    //                         component: () =>
+    //                             import('./views/index/help/index.vue'),
     //                         children: [
     //                             {
-    //                                 path: 'tag:/tid?',
-    //                                 name: 'index-help-index-tag-tid',
-    // tag/_tid
-    //                                 component: () => {}
+    //                                 path: ':id',
+    //                                 name: 'index-help-index-id',
+    //                                 component: () =>
+    //                                     import(
+    //                                         './views/index/help/index/_id.vue'
+    //                                     )
     //                             },
     //                             {
-    //                                 path: ':id',
-    // _id
-    //                                 name: 'index-help-index-id',
-    //                                 component: () => {}
+    //                                 path: 'tag/:tid',
+    //                                 name: 'index-help-index-tag-tid',
+    //                                 component: () =>
+    //                                     import(
+    //                                         './views/index/help/index/tag/_tid.vue'
+    //                                     )
     //                             }
     //                         ]
     //                     },
     //                     {
-    //                         path: 'detail/:id?',
+    //                         path: 'detail/:id',
     //                         name: 'index-help-detail-id',
-    //                         component: () => {}
+    //                         component: () =>
+    //                             import('./views/index/help/detail/_id.vue')
     //                     }
     //                 ]
     //             }

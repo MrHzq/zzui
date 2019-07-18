@@ -1,20 +1,11 @@
 <template>
     <div id="app">
-        <!-- <div v-for="i in r" :key="i">
-            <router-link :to="i">{{i}}</router-link>
-        </div> -->
+        {{ $route.name }} {{ $route.params }}
         <router-view />
     </div>
 </template>
 <script>
-    export default {
-        data() {
-            return {
-                r: ['about', 'home']
-            }
-        }
-    }
+    export default {}
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>
