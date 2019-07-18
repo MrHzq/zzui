@@ -1,18 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import hzqRouter from './hzq-router2'
+import autoRouter from 'vue-router-auto'
 
 Vue.use(Router)
-const routes = hzqRouter({
-    // redirect: '/login',
+const routes = autoRouter({
+    // redirect: '/about',
     rc: require.context('@/views', true, /\.vue$/)
 })
-console.log(routes)
 
 export default new Router({
     mode: 'history',
     base: process.env.BASE_URL,
-    //     import('./views/index.vue'),
     routes
     // :[
     //     {

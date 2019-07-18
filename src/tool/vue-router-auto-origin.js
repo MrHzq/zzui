@@ -2,10 +2,8 @@
  * @Author: hzq
  * @Date: 2018-12-12 10:10:19
  * @Last Modified by: hzq
- * @Last Modified time: 2019-07-18 20:06:10
- * @文件说明: 所有路由处理
- * key：为views下面的【文件夹】名称
- * []：为对应key下面的【.vue文件】名称
+ * @Last Modified time: 2019-07-18 21:47:15
+ * @文件说明: 所有路由处理 - 源码
  */
 
 // 所生成的所有路由数组
