@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import autoRouter from './tool/vue-router-auto-origin'
+import autoRouter from 'vue-router-auto'
 
 Vue.use(Router)
 const routes = autoRouter({
     // redirect: '/about',
-    rc: require.context('@/views', true, /\.vue$/),
-    rootFile: 'views'
+    rc: require.context('@/pages', true, /\.vue$/),
+    rootFile: 'pages'
 })
 console.log(routes)
 export default new Router({
